@@ -1,0 +1,32 @@
+# TODO:
+    # STACK_OPTS
+
+        -> BUILD_STACK:     (Directory)
+            - Country							[ToDo]
+            - NSP (Within List)					[DONE]
+            - MIN_MAX (Starting-ending  Ranges)	[DONE]
+
+        -> GET_STACK:       (Profiles)
+            - Country							[ToDo]
+            - NSP								[DONE]
+            - MIN_MAX							[DONE]
+            - SEARCH_OPTS 	[TrueCallerJS]		[DONE]
+            - SEARCH_OPTS  	[URLS]				[IN_PROGRESS]
+            - Clustering    [Area, Age, Gender]
+
+
+
+# Known Bug:
+    1) [USER_NAME]  :   ->[DO NOT USE "USER" OR "_" IN ANY USER_NAME]
+                        ->["MUST MAKE IT DENIED BEFORE SEN TO SERVER"]
+
+
+
+
+
+
+
+
+
+
+
