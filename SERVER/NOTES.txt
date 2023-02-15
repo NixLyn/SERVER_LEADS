@@ -1,23 +1,32 @@
 # TODO:
-    # STACK_OPTS
-		-> MAIN_ISSUES:		(DORK_BLOCKS)		[IN_PROGRESS]
-			***
-			- Double Check All Functions ( Post_Restructuring )
-			- Reset Session Cache Data on each number profile scrape
-			- Package each Number Profile in one .csv file
+	# TESTING:
+		-> LET RIP IN BULK
 
-        -> BUILD_STACK:     (Directory)
-            - Country							[ToDo]
-            - NSP (Within List)					[DONE]
-            - MIN_MAX (Starting-ending  Ranges)	[DONE]
+    # Clustering:    [Area, Age, Gender, etc]							[NEXT_UP]
 
+    	-> GROUP SCRAPING:
+    		- FLAG LIST 												[ToDo]
+    		- SCRAPE FILTERING											[ToDo]
+
+		-> CLUSTER MATHING:
+			- COMPARE GROUP MEMBER DATA TO STACK DATA					[ToDo]
+			- REFERENCE BUILDING										[ToDo]
+
+
+    # STACK_OPTS:
         -> GET_STACK:       (Profiles)
-            - Country							[ToDo]
-            - NSP								[DONE]
-            - MIN_MAX							[DONE]
-            - SEARCH_OPTS 	[TrueCallerJS]		[DONE]
-            - SEARCH_OPTS  	[URLS]				[ON_HOLD]
-            - Clustering    [Area, Age, Gender]
+			- Double Check All Functions ( Post_Restructuring )			[DONE]
+			- Tor Request, reset after each profile build				[DONE]*
+			- Package each Number Profile in one .csv file				[DONE]
+			- Dork All Known Social Pages								[DONE]*
+			- Validate Number Before Build								[DONE]
+            - NSP														[DONE]
+            - MIN_MAX													[DONE]
+            - Country													[ToDo]:[USING]->[COUNTRY_CODE]
+
+
+        -> BUILD_STACK:   						[OBSOLETE]
+            - SEARCH_OPTS 	[TrueCallerJS]								[OBSOLETE]
 
 
 
@@ -25,5 +34,8 @@
     1) [USER_NAME]  :   ->[DO NOT USE "USER" OR "_" IN ANY USER_NAME]
                         ->["MUST MAKE IT DENIED BEFORE SENT TO SERVER"]
 
+# UPDATES:
+	1) GUI REMOVED, DUE TO FOLDER SIZE
 
+	2) FILE_REQUIREMENTS: IPGeolocation
 

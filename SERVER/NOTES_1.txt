@@ -1,0 +1,29 @@
+# TODO:
+    # STACK_OPTS
+		-> MAIN_ISSUES:		(DORK_BLOCKS)		[IN_PROGRESS]
+			***
+			- Double Check All Functions ( Post_Restructuring )
+			- Reset Session Cache Data on each number profile scrape
+			- Package each Number Profile in one .csv file
+
+        -> BUILD_STACK:     (Directory)
+            - Country							[ToDo]
+            - NSP (Within List)					[DONE]
+            - MIN_MAX (Starting-ending  Ranges)	[DONE]
+
+        -> GET_STACK:       (Profiles)
+            - Country							[ToDo]
+            - NSP								[DONE]
+            - MIN_MAX							[DONE]
+            - SEARCH_OPTS 	[TrueCallerJS]		[DONE]
+            - SEARCH_OPTS  	[URLS]				[ON_HOLD]
+            - Clustering    [Area, Age, Gender]
+
+
+
+# Known Bug:
+    1) [USER_NAME]  :   ->[DO NOT USE "USER" OR "_" IN ANY USER_NAME]
+                        ->["MUST MAKE IT DENIED BEFORE SENT TO SERVER"]
+
+
+

@@ -1,0 +1,82 @@
+s
+USING---
+
+SOCIAL-- 
+
+# FACEBOOK
+f"https://www.google.com/search?q=site%3Afacebook.com+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+# TWITTER
+f"https://www.google.com/search?q=site%3Atwitter.com+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+# LINKED_IN
+f"https://www.google.com/search?q=site%3Alinkedin.com+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+# INSTA_GRAM
+f"https://www.google.com/search?q=site%3Ainstagram.com+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+
+# GOOGLE SYNC.ME
+f"https://www.google.com/search?q=site%3Async.me+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+
+
+BUSINESS --
+
+# YELLOW_PAGES
+f"https://www.google.com/search?q=site%3Ayellowpages.ca+intext%3A%22%2B27{to_dork}%22"
+
+# NUM_INFO.NET
+f"https://www.google.com/search?q=site%3Anuminfo.net+intext%3A%2227{to_dork}%22+OR+intext%3A%22%2B27{to_dork}%22+OR+intext%3A%220{to_dork}%22"
+
+
+
+
+
+NOT_USING---
+
+[+] Link: https://www.google.com/search?q=site%3Awhocallsyou.de+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Apastebin.com+intext%3A%2227832348114%22+OR+intext%3A%22%2B27832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Awhycall.me+intext%3A%2227832348114%22+OR+intext%3A%22%2B27832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Alocatefamily.com+intext%3A%2227832348114%22+OR+intext%3A%22%2B27832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Aspytox.com+intext%3A%220832348114%22
+[i] Reputation footprints
+
+
+[+] Link: https://www.google.com/search?q=site%3Awhosenumber.info+intext%3A%22%2B27832348114%22+intitle%3A%22who+called%22
+[+] Link: https://www.google.com/search?q=intitle%3A%22Phone+Fraud%22+intext%3A%2227832348114%22+OR+intext%3A%22%2B27832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Afindwhocallsme.com+intext%3A%22%2B27832348114%22+OR+intext%3A%2227832348114%22
+
+
+
+
+
+[+] Link: https://www.google.com/search?q=site%3Aphonenumbers.ie+intext%3A%22%2B27832348114%22
+
+[+] Link: https://www.google.com/search?q=site%3Awho-calledme.com+intext%3A%22%2B27832348114%22
+[+] Link: https://www.google.com/search?q=site%3Ausphonesearch.net+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Awhocalled.us+inurl%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Aquinumero.info+intext%3A%220832348114%22+OR+intext%3A%2227832348114%22
+[+] Link: https://www.google.com/search?q=site%3Auk.popularphotolook.com+inurl%3A%220832348114%22
+[i] Temporary number providers footprints
+[+] Link: https://www.google.com/search?q=site%3Ahs3x.com+intext%3A%2227832348114%22                                                                                   
+[+] Link: https://www.google.com/search?q=site%3Areceive-sms-now.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asmslisten.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asmsnumbersonline.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Afreesmscode.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Acatchsms.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asmstibo.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asmsreceiving.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Agetfreesmsnumber.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asellaite.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceive-sms-online.info+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceivesmsonline.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceive-a-sms.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asms-receive.net+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceivefreesms.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceive-sms.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceivetxt.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Afreephonenum.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Afreesmsverification.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Areceive-sms-online.com+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22
+[+] Link: https://www.google.com/search?q=site%3Asmslive.co+intext%3A%2227832348114%22+OR+intext%3A%220832348114%22

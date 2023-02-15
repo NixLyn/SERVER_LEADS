@@ -2,9 +2,9 @@
 import threading
 import time
 from datetime import datetime
+from strip_ansi import strip_ansi
 
-
-from STACK_PY import file_stack_man, phone_vali_, trucall_scan, web_stack, geo_stat
+from STACK_PY import file_stack_man, phone_vali_, trucall_scan, dork_stack
 
 class Get_Stack():
     # INITIATE VARIABLES
@@ -17,10 +17,10 @@ class Get_Stack():
 
         # STACK IMPORTS
         from STACK_PY.trucall_scan import TrueCallerScan
-        self.TR_JS            = TrueCallerScan()
+        self.TR_JS              = TrueCallerScan()
 
-        from STACK_PY.web_stack import Web_Stack
-        self.WS             = Web_Stack()
+        from STACK_PY.dork_stack import Dork_Stack
+        self.DS                 = Dork_Stack()
 
         from STACK_PY.phone_vali_ import NumPho
         self.NP                 = NumPho()
@@ -177,55 +177,85 @@ class Get_Stack():
 
 
 
-
-
     # SEARCH PROFILE
     def create_profile(self, pre_, nsp_, mid_, tar_):
-        try:
-            tr_scan     = []
-            name_       = ""
-            email_      = ""
+        stack_total_        = []
+        num_ah          = pre_+nsp_+mid_+tar_
 
-            num_ah      = pre_+nsp_+mid_+tar_
-            pre_dir     = f"STACK_PY/DATA/{str(pre_[1:])}/"
-            nsp_dir     = f"{pre_dir}{nsp_}/"
-            mid_dir     = f"{nsp_dir}{mid_}/"
-            num_dir     = f"{mid_dir}{tar_}/"
-            num_file    = f"{num_dir}NUM_.txt"
-            file_dir    = f"{num_dir}NUM.txt"
-            name_dir    = f"{num_dir}NAME.txt"
-            mail_dir    = f"{num_dir}MAIL.txt"
+
+        try:
+
+            tr_scan         = []
+            name_           = ""
+            email_          = ""
+
+            # FILE_DIRS
+
+            pre_dir         = f"STACK_PY/DATA/{str(pre_[1:])}/"
+            nsp_dir         = f"{pre_dir}{nsp_}/"
+            mid_dir         = f"{nsp_dir}{mid_}/"
+            num_dir         = f"{mid_dir}{tar_}/"
+            num_file        = f"{num_dir}NUM_.txt"
+            file_dir        = f"{num_dir}NUM.txt"
+            name_dir        = f"{num_dir}NAME.txt"
+            mail_dir        = f"{num_dir}MAIL.txt"
 
             # CLEAN SEARCH
-            urls_dir    = f"{num_dir}URLS.csv"
+            urls_dir        = f"{num_dir}URLS.csv"
+            tots_dir        = f"{num_dir}TOT_.csv"
 
-            # DORKS
-            fb_file    = f"{num_dir}FB_DORK.csv"
-            tw_file    = f"{num_dir}TW_DORK.csv"
-            li_file    = f"{num_dir}LI_DORK.csv"
-            in_file    = f"{num_dir}IN_DORK.csv"
 
+            # FULL_DORK_RETURN
+            dork_stack_     = []
 
 
             print(f"\n[NUM_@_HAND]:[{num_ah}]")
 
-            # TRUE_CALLER_SCAN
+
             try:
+                # FIRST CHECK IF NUM IS VALID
+                valid_ = self.NP.check_num_data_(num_ah)
+                if valid_ != True:
+                    print(f"[NUMBER_NOT_VALID]:[>{num_ah}<]")
+                    return
+                else:
+                    phone_ip = self.NP.get_ip_(num_ah)
+                    stack_total_.append(num_ah)
+                    stack_total_.append(phone_ip)
+
+            except Exception as e:
+                print(f"[E]:[VALIDATE_PROFILE]:[>{str(e)}<]")
+
+
+
+
+            # BUILD_PROFILE
+            try:
+                # COUNTRY_CODE_DIR
                 is_pre = self.FM.check_dir(pre_dir)
                 if is_pre == False:
                     self.FM.make_dir(pre_dir)
+
+                # NSP_DIR
                 is_nsp = self.FM.check_dir(nsp_dir)
                 if is_nsp == False:
                     self.FM.make_dir(nsp_dir)
+
+                # MIDi_LVL_DIR
                 is_mid = self.FM.check_dir(mid_dir)
                 if is_mid == False:
                     self.FM.make_dir(mid_dir)
-                is_num_ = self.FM.check_dir(num_dir)
-                if is_num_ == False:
-                    self.FM.make_dir(num_dir)
-                    self.FM.write_file(file_dir, str(num_ah), ",", "a+")
 
-                # TRUE_CALLER_SCAN
+                # BASE_DIR
+                num_look_ = self.FM.check_file(num_file)
+                if num_look_ == False:
+                    self.FM.make_dir(num_dir)
+                    self.FM.write_file(num_file, num_ah, ",", "w")
+            except Exception as e:
+                print(f"[E]:[PROFILE_URLS]:[{str(e)}]")
+
+            # TRUE_CALLER_SCAN
+            try:
                 name_check = self.FM.check_file(name_dir)
                 if name_check == False:
                     print("[NO_NAME]:[SCANNING_NOW]")
@@ -236,82 +266,46 @@ class Get_Stack():
                             if "NONE" not in str(tr_scan[0]):
                                 name_ = str(tr_scan[0])
                                 self.FM.write_file(name_dir, name_, ",", "a+")
+                                stack_total_.append(name_)
+
                             if "NONE" not in str(tr_scan[1]):
                                 email_ = str(tr_scan[1])
                                 self.FM.write_file(mail_dir, email_, ",", "a+")
+                                stack_total_.append(email_)
                     except Exception as e:
                         print(f"[E]:[TRUE_SCAN]:[{str(e)}]")
 
 
-                num_look_ = self.FM.check_file(num_file)
-                if num_look_ == False:
-                    try:
-                        da_num_ = self.NP.check_num_data_(num_ah)
-                        if "NONE" not in str(da_num_):
-                            self.FM.write_file(num_file, da_num_, ",", "a+")
-                    except Exception as e:
-                        print(f"[E]:[TRUE_SCAN]:[{str(e)}]")
 
 
-                try:
-                    g_rl_ = f'https://www.google.com/search?client=firefox-b-e&q={num_ah}'
-                    urls_ = self.WS.scrape_url(g_rl_)
-                    if urls_:
-                        is_url_ = self.FM.check_file(urls_dir)
-                        if is_url_ == False:
-                            self.FM.write_file(urls_dir, str(urls_), "\n", "a+")
-                except Exception as e:
-                    print(f"[E]:[PROFILE_URLS]:[{str(e)}]")
+                #try:
+                #    g_rl_ = f'https://www.google.co.za/search?q={num_ah}'
+                #    urls_ = self.WS.scrape_url(g_rl_)
+                #    if urls_:
+                #        is_url_ = self.FM.check_file(urls_dir)
+                #        if is_url_ == False:
+                #            self.FM.write_file(urls_dir, str(urls_), "\n", "a+")
+                #except Exception as e:
+                #    print(f"[E]:[PROFILE_URLS]:[{str(e)}]")
             except Exception as e:
                 print(f"[E]:[SCRAPE_PROFILE]:[{str(e)}]")
-
 
             # DORK_STACK
             try:
-                # FACE_BOOK
-                try:
-                    fb_dork_ = self.WS.fb_dork_(num_ah)
-                    if "NOT_FOUND" not in str(fb_dork):
-                        self.FM.write_file(fb_file, fb_dork_, ",", "a+")
-                    else:
-                        print("NO_FB")
-                except Exception as e:
-                    print(f"[E]:[GET_FB]:[{str(e)}]")
-
-                # TWITTER
-                try:
-                    tw_dork_ = self.WS.tw_dork_(num_ah)
-                    if "NOT_FOUND" not in str(tw_dork):
-                        self.FM.write_file(tw_file, tw_dork_, ",", "a+")
-                    else:
-                        print("NO_TW")
-                except Exception as e:
-                    print(f"[E]:[GET_TW]:[{str(e)}]")
-
-
-                # LINKED_IN
-                try:
-                    li_dork_ = self.WS.li_dork_(num_ah)
-                    if "NOT_FOUND" not in str(fb_dork):
-                        self.FM.write_file(li_file, li_dork_, ",", "a+")
-                    else:
-                        print("NO_LI")
-                except Exception as e:
-                    print(f"[E]:[GET_LI]:[{str(e)}]")
-
-
-                # INSTAGRAM
-                try:
-                    in_dork_ = self.WS.in_dork_(num_ah)
-                    if "NOT_FOUND" not in str(fb_dork):
-                        self.FM.write_file(in_file, in_dork_, ",", "a+")
-                    else:
-                        print("NO_IN")
-                except Exception as e:
-                    print(f"[E]:[GET_FB]:[{str(e)}]")
+                dork_stack_ = self.DS.get_stack_(num_ah)
+                for dork_ in dork_stack_:
+                    stack_total_.append(dork_)
             except Exception as e:
                 print(f"[E]:[SCRAPE_PROFILE]:[{str(e)}]")
 
+
+            # SAVE ALL DATA 
+            try:
+                for dt_ in stack_total_:
+                    print(f"[ST_]:[ITEM]:[{str(dt_)}]")
+                self.FM.write_file(tots_dir, stack_total_, "\n", "w")
+            except Exception as e:
+                print(f"[E]:[SCRAPE_PROFILE]:[{str(e)}]")
 
         except Exception as e:
             print(f"[E]:[CREATE_PROFILE]:[{str(e)}]")
@@ -343,6 +337,9 @@ class Get_Stack():
 
                 tar_number = nsp_+mid_seg+end_seg
                 save_list.append(tar_number)
+
+
+
                 self.create_profile(pre_, nsp_, mid_seg, end_seg)
 
             return save_list
